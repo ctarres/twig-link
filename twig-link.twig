@@ -1,0 +1,14 @@
+{# Access to link field data to render the URL or title #}
+
+{# Get URL #}
+{{ content.field_link[0]['#url'] }}
+
+{# Get Title #}
+{{ content.field_link[0]['#title'] }}
+
+{# Build a link in Drupal Way. We can pass the info as item.title and item.uri if we set the variables #}
+
+{{ link(item.title, item.uri, { 'class':['foo', 'bar', 'baz']} ) }}
+
+{# Absolute URL #}
+{{ url('<front>') }}
